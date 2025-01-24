@@ -1,0 +1,363 @@
+:root {
+  --primary: #1d75c3;
+  --secondary: #003a80;
+  --light: #fcfcfc;
+  --dark: #434343;
+  --dark-gray: #1d2a33;
+  --gray: #21323f;
+  --light-gray: #3a4d5f;
+  --light-blue: #1b72e8;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url(fonts/Raleway/static/Raleway-Bold.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(fonts/Poppins/Poppins-Regular.ttf);
+  font-style: normal;
+  font-weight: 500;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark);
+  background: var(--light-gray);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
+section {
+  scroll-margin-top: 85px;
+}
+
+.lead {
+  font-size: 1.5em;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.active {
+  color: var(--light-blue) !important;
+}
+
+#logo {
+  clip-path: circle(50% at center);
+}
+
+#hero {
+  background-image: url('img/background-trapecios.png');
+  background-size: cover;
+  background-position: center;
+  color: var(--light);
+  text-align: center;
+}
+
+#hero img {
+  width: 80%;
+  height: auto;
+}
+
+#fondo-portico {
+  color: white;
+  text-align: center;
+}
+
+#subtitulo-portico {
+  font-family: 'Roboto', serif;
+  font-weight: 600;
+}
+
+#about {
+  background-image: url('img/background-trapecios.png');
+  background-size: cover;
+  background-position: center;
+}
+
+#about-text {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 50px;
+  border-radius: 4px;
+}
+
+#about-people {
+  position: relative;
+
+  color: white;
+  border-radius: 4px;
+}
+
+#about-people img {
+  border-radius: 50%;
+  width: 150px;
+  height: auto;
+}
+
+#services {
+  background-color: var(--gray);
+  color: var(--light);
+}
+
+#fondo-portico {
+  width: 200px;
+  height: 200px;
+}
+
+.top-menu {
+  background-color: var(--light-blue);
+  color: white;
+}
+
+.top-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.top-menu a:hover {
+  color: lightblue;
+}
+
+.navbar {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-color: var(--gray);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 4px 4px;
+  color: white;
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--light);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--light-blue);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.card {
+  background-color: var(--light);
+  border: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-stands {
+  background-color: var(--light);
+  border-color: var(--light);
+  color: var(--dark);
+  font-weight: 600;
+  box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.75);
+}
+
+.btn-stands:hover {
+  background-color: var(--dark);
+  border-color: var(--dark);
+  color: var(--light);
+}
+
+footer {
+  background-color: var(--dark);
+  color: white;
+}
+
+@keyframes slider {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#clients {
+  background-color: var(--light);
+}
+
+.logos {
+  overflow: hidden;
+  padding: 30px 0;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--light));
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--light));
+}
+
+.logos-clientes {
+  display: inline-block;
+  animation: slider 25s infinite linear;
+}
+
+.logos-clientes img {
+  height: 50px;
+  margin: 0 40px;
+}
+
+#contact {
+  background-image: url('img/background-trapecios.png');
+}
+
+#contact .container {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 50px;
+  border-radius: 4px;
+}
+
+#contact-form label {
+  color: var(--light);
+}
+
+.decoration-line {
+  background-color: var(--light);
+  height: 2px;
+  width: 200px;
+  margin: 20px auto;
+}
+
+#stands-main {
+  background-image: url('img/background-trapecios.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#stands-main h1 {
+  color: var(--light);
+}
+
+#stands {
+  color: var(--light);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stand-card {
+  height: 300px;
+  width: 400px;
+  display: flex;
+  background-color: var(--light-gray);
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stand-card-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.stand-card:hover .stand-card-image {
+  transform: scale(1.05);
+}
+
+.stand-card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.stand-card:hover .stand-card-info {
+  transform: translateY(0);
+}
+
+.stand-card-info-mobile {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+}
+
+.stand-card-title {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+  .stand-card-info {
+    display: none;
+  }
+
+  .stand-card-info-mobile {
+    display: block;
+  }
+}
+
+.modal-dialog {
+  max-width: 800px;
+}
+
+.modal-title {
+  color: var(--dark);
+}
+
+.carousel-item img {
+  max-height: 600px;
+  object-fit: contain;
+}
+
+.stand-card-image {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.stand-card-image:hover {
+  transform: scale(1.05);
+}
