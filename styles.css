@@ -276,6 +276,10 @@ footer {
   color: var(--light);
 }
 
+#stands-main p {
+  color: var(--light);
+}
+
 #stands {
   color: var(--light);
   display: flex;
