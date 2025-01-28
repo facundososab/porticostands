@@ -348,6 +348,10 @@ footer {
   color: var(--dark);
 }
 
+.carousel-inner {
+  border-radius: 10px;
+}
+
 .carousel-item img {
   max-height: 600px;
   object-fit: contain;
