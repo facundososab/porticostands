@@ -27,6 +27,10 @@ html {
   scroll-behavior: smooth;
 }
 
+p {
+  margin: 0; /* Elimina los márgenes predeterminados */
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   color: var(--dark);
@@ -320,6 +324,10 @@ footer {
 
 .stand-card-info-mobile {
   display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 10px;
