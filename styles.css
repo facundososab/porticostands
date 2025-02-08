@@ -245,7 +245,7 @@ footer {
 }
 
 #contact {
-  background-image: url('img/background-trapecios.png');
+  background-color: var(--gray);
 }
 
 #contact .container {
@@ -303,6 +303,7 @@ footer {
 .stand-card-image {
   width: 100%;
   height: auto;
+  object-fit: cover;
   transition: transform 0.3s ease;
   cursor: pointer;
 }

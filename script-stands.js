@@ -19,12 +19,12 @@ const empresas = [
     ],
   },
   {
-    name: 'MSR',
-    images: [
-      'img/stands/msr/msr1.jpg',
-      'img/stands/msr/msr2.jpg',
-      'img/stands/msr/msr3.jpg',
-    ],
+    name: 'Dove',
+    images: ['img/stands/dove/dove1.jpg', 'img/stands/dove/dove2.jpg'],
+  },
+  {
+    name: 'NIDO DE ÁGUILAS',
+    images: ['img/stands/nidoaguilas/nido1.jpg'],
   },
   {
     name: 'La cumbre',
