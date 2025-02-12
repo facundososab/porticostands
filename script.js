@@ -32,22 +32,24 @@ function loadCarouselItems() {
   }
 }
 
+emailjs.init('qU3Ck7sYsIktqg2By') //Public key
+
 function sendEmails(formData) {
   // Enviar el correo a mi
-  const sendToYou = emailjs.send('service_604rk54', 'template_hsaguau', {
+  const sendToYou = emailjs.send('service_a3j86ui', 'template_ns3ilyv', {
     from_name: formData.name,
     from_email: formData.email,
     message: formData.message,
-    to_email: 'facundososadev@gmail.com',
-    subject: 'Mensaje desde portfolio',
+    to_email: 'porticostands@gmail.com',
+    subject: 'Mensaje desde pagina web', // Asunto del correo
   })
 
   // Enviar el correo al remitente (informándole que su mensaje fue enviado)
-  const sendToSender = emailjs.send('service_604rk54', 'template_j2wgpsq', {
+  const sendToSender = emailjs.send('service_a3j86ui', 'template_e0nw6fj', {
     from_name: formData.name,
-    from_email: 'facundososadev@gmail.com',
+    from_email: 'porticostands@gmail.com',
     to_email: formData.email, // El correo del remitente
-    subject: '¡Mensaje recibido!', // Asunto del correo
+    subject: 'Gracias por contactarte con Portico Stands!', // Asunto del correo
     message: formData.message, // Mensaje que se le enviará al remitente
   })
 
@@ -146,4 +148,29 @@ document.addEventListener('DOMContentLoaded', function () {
       this.classList.add('active')
     })
   })
+})
+
+//Scroll animations
+
+document.addEventListener('DOMContentLoaded', () => {
+  const animatedElements = document.querySelectorAll(
+    '.fade-in, .slide-in-left, .slide-in-right, .scale-in'
+  )
+
+  const animateOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.8
+
+    animatedElements.forEach((element) => {
+      const elementTop = element.getBoundingClientRect().top
+
+      if (elementTop < triggerBottom) {
+        element.classList.add('visible')
+      } else {
+        element.classList.remove('visible')
+      }
+    })
+  }
+
+  window.addEventListener('scroll', animateOnScroll)
+  animateOnScroll() // Initial check on page load
 })
