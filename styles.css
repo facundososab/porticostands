@@ -273,6 +273,32 @@ footer {
   margin: 20px auto;
 }
 
+.whatsapp-button {
+  position: fixed;
+  bottom: 30px; /* Ajusta el margen desde la parte inferior */
+  right: 30px; /* Ajusta el margen desde el borde derecho */
+  background-color: #25d366; /* Color verde de WhatsApp */
+  color: white; /* Color del ícono */
+  width: 70px; /* Ancho del círculo */
+  height: 70px; /* Altura del círculo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Para hacerlo redondo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.whatsapp-button i {
+  font-size: 30px; /* Aumenta el tamaño del ícono */
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra más grande */
+}
+
 #stands-main {
   background-image: url('img/background-trapecios.png');
   background-size: cover;
